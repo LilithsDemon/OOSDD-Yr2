@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "Crypto.AES/1.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Crypto.AES.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Crypto.AES.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Crypto.AES/1.0.4": {
+      "sha512": "IvwEBGbwAtlP8iDFhmKDewN4VaIiHDSNSHw7e9U3vqYoN6NxuItMq6raYj0UZKZStrgSdifYbwFYnYrCEd+4yw==",
+      "type": "package",
+      "path": "crypto.aes/1.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "crypto.aes.1.0.4.nupkg.sha512",
+        "crypto.aes.nuspec",
+        "lib/netstandard2.0/Crypto.AES.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Crypto.AES >= 1.0.4"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lucyg\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "\\\\10.147.18.93\\uni\\Year 2\\OOP\\Deliverables\\Morse_Code\\Morse_Code\\Morse_Code.csproj",
+      "projectName": "Morse_Code",
+      "projectPath": "\\\\10.147.18.93\\uni\\Year 2\\OOP\\Deliverables\\Morse_Code\\Morse_Code\\Morse_Code.csproj",
+      "packagesPath": "C:\\Users\\lucyg\\.nuget\\packages\\",
+      "outputPath": "\\\\10.147.18.93\\uni\\Year 2\\OOP\\Deliverables\\Morse_Code\\Morse_Code\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\lucyg\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "Crypto.AES": {
+            "target": "Package",
+            "version": "[1.0.4, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

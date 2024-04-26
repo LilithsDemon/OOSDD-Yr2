@@ -1,0 +1,17 @@
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.GeneratedMSBuildEditorConfig.editorconfig
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.AssemblyInfoInputs.cache
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.AssemblyInfo.cs
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.csproj.CoreCompileInputs.cache
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\bin\Debug\net7.0\Morse_Code.exe
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\bin\Debug\net7.0\Morse_Code.deps.json
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\bin\Debug\net7.0\Morse_Code.runtimeconfig.json
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\bin\Debug\net7.0\Morse_Code.dll
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\bin\Debug\net7.0\Morse_Code.pdb
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\bin\Debug\net7.0\Crypto.AES.dll
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.csproj.AssemblyReference.cache
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.csproj.CopyComplete
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.dll
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\refint\Morse_Code.dll
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.pdb
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\Morse_Code.genruntimeconfig.cache
+\\10.147.18.93\uni\Year 2\OOP\Deliverables\Morse_Code\Morse_Code\obj\Debug\net7.0\ref\Morse_Code.dll

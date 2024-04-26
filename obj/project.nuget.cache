@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZKh8B2CYSRKCa7piJILf8EIXF1ZxonlLpDrsk2wEKlxdrsmnADZYhFcL+OzwzX5demGR/U8q1JWQlwq6Q6qmZQ==",
+  "success": true,
+  "projectFilePath": "\\\\10.147.18.93\\uni\\Year 2\\OOP\\Deliverables\\Morse_Code\\Morse_Code\\Morse_Code.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lucyg\\.nuget\\packages\\crypto.aes\\1.0.4\\crypto.aes.1.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
