@@ -41,6 +41,10 @@
             "Crypto.AES": {
               "target": "Package",
               "version": "[1.0.4, )"
+            },
+            "JollyWrapper": {
+              "target": "Package",
+              "version": "[1.0.4, )"
             }
           },
           "imports": [

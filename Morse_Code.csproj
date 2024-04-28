@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Crypto.AES" Version="1.0.4" />
+    <PackageReference Include="JollyWrapper" Version="1.0.4" />
   </ItemGroup>
 
 </Project>

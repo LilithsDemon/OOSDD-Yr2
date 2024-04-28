@@ -1,10 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "ZKh8B2CYSRKCa7piJILf8EIXF1ZxonlLpDrsk2wEKlxdrsmnADZYhFcL+OzwzX5demGR/U8q1JWQlwq6Q6qmZQ==",
+  "dgSpecHash": "/catdVC+gUU5SAnY6Tj84J+ekEgIlfXJPSnkFNC6DUhNc8mVAI3jszj+fsx1Yny9tQg0B0gl4XgGTC9mKjUchA==",
   "success": true,
   "projectFilePath": "\\\\10.147.18.93\\uni\\Year 2\\OOP\\Deliverables\\Morse_Code\\Morse_Code\\Morse_Code.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lucyg\\.nuget\\packages\\crypto.aes\\1.0.4\\crypto.aes.1.0.4.nupkg.sha512"
+    "C:\\Users\\lucyg\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\crypto.aes\\1.0.4\\crypto.aes.1.0.4.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\jollywrapper\\1.0.4\\jollywrapper.1.0.4.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\k4os.compression.lz4.streams\\1.2.6\\k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\mysql.data\\8.0.27\\mysql.data.8.0.27.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512",
+    "C:\\Users\\lucyg\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

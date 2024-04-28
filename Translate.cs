@@ -18,8 +18,9 @@ namespace Translations
             foreach (string line in _lines)
             {
                 if (string.IsNullOrWhiteSpace(line) || line.StartsWith("#")) continue;
-                string[] parts = line.Split(' ');
-                KeyValuePair<char, string> translation = new(parts[0][0], parts[1]); // This will not work for American language
+                char character = Convert.ToChar(line.Substring(0, 1));
+                string morse = line.Substring(2);
+                KeyValuePair<char, string> translation = new(character, morse);
                 //Console.WriteLine($"Adding translation: {translation.Key} -> {translation.Value}");
                 if (Translations.ContainsValue(translation.Value)) continue; // If the value is already in the dictionary, skip it
 
@@ -40,11 +41,12 @@ namespace Translations
             return input;
         }
 
-        public char GetRandomLetter()
+        public record RandomValues(char Key, string Value);
+        public RandomValues GetRandomMorseCharacter()
         {
             Random random = new();
             int index = random.Next(0, Translations.Count);
-            return Translations.ElementAt(index).Key;
+            return new RandomValues(Translations.ElementAt(index).Key, Translations.ElementAt(index).Value);
         }
 
         public char GetKey(string morse)
@@ -73,7 +75,7 @@ namespace Translations
             string[] output = new string[input.Length];
             for(int i = 0; i < input.Length; i++)
             {
-                if(char.Parse(input[i]) == ' ') output.Append(" ");
+                if(char.Parse(input[i]) == ' ') output.Append("  ");
                 if(_set.Translations.TryGetValue(char.Parse(input[i]), out string? morse)) output.Append(morse);
                 else Console.WriteLine($"No Translation found for {input[i]}");
             }
@@ -86,7 +88,7 @@ namespace Translations
             input.Replace(".", "·");
             for(int i = 0; i < input.Length; i++)
             {
-                if (_set.Translations.TryGetValue(input[i], out string? morse)) output += morse + " ";
+                if (_set.Translations.TryGetValue(input[i], out string? morse)) output += morse + "  ";
                 else Console.WriteLine($"No translation found for {input[i]}");
             }
             return output;
