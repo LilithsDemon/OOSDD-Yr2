@@ -16,9 +16,9 @@ namespace DB
         public DatabaseConnection()
         {
             Database.Init("plesk.remote.ac",
-              "WS328700_OOSDD",
+              "ws328700_OOSDD",
               "~7138zmfI",
-              "WS328700_OOSDD",
+              "ws328700_OOSDD",
               "SSLMODE=None");
         }
     }
