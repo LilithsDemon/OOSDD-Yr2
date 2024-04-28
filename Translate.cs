@@ -3,7 +3,6 @@ using System.Dynamic;
 using System.IO;
 using System.Linq.Expressions;
 using System.Reflection.PortableExecutable;
-using Compression;
 
 namespace Translations
 {
@@ -11,15 +10,15 @@ namespace Translations
     {
         public Dictionary<char, string> Translations { get; } = new();
         private string[] _lines;
-        public TranslationSet(string file) => _lines = File.ReadAllLines(file);
+        public TranslationSet(string file) => _lines = File.ReadAllLines(file); // On creation, read all lines from the file
 
         public void CreateTranslations()
         {
             foreach (string line in _lines)
             {
-                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("#")) continue;
-                char character = Convert.ToChar(line.Substring(0, 1));
-                string morse = line.Substring(2);
+                if (string.IsNullOrWhiteSpace(line) || line.StartsWith("#")) continue; // Skip empty lines and comments
+                char character = Convert.ToChar(line.Substring(0, 1)); // Get the first character of the line
+                string morse = line.Substring(2); // Get the morse code from the line
                 KeyValuePair<char, string> translation = new(character, morse);
                 //Console.WriteLine($"Adding translation: {translation.Key} -> {translation.Value}");
                 if (Translations.ContainsValue(translation.Value)) continue; // If the value is already in the dictionary, skip it
@@ -29,9 +28,9 @@ namespace Translations
             Translations.Add(' ', "/");
         }
 
-        public bool CheckForInvalidCharacters(string input) => input.Any(c => !Translations.ContainsKey(c));
+        public bool CheckForInvalidCharacters(string input) => input.Any(c => !Translations.ContainsKey(c)); // Check if the input contains any characters that are not in the dictionary
 
-        public string FixInvalidCharacters(string input)
+        public string FixInvalidCharacters(string input) // Remove any characters that are not in the dictionary
         {
             for(int i = 0; i < input.Length; i++)
             {
@@ -41,15 +40,15 @@ namespace Translations
             return input;
         }
 
-        public record RandomValues(char Key, string Value);
-        public RandomValues GetRandomMorseCharacter()
+        public record RandomValues(char Key, string Value); // A record that contains a random letter and it's morse code
+        public RandomValues GetRandomMorseCharacter() // Get a random letter and it's morse code
         {
             Random random = new();
             int index = random.Next(0, Translations.Count);
             return new RandomValues(Translations.ElementAt(index).Key, Translations.ElementAt(index).Value);
         }
 
-        public char GetKey(string morse)
+        public char GetKey(string morse) // Get the key from the value
         {
             List<char> keys = (from kvp in Translations where kvp.Value == morse select kvp.Key).ToList();
             try 
@@ -65,12 +64,10 @@ namespace Translations
 
     class MorseTranslate
     {
-        // 1 interface - 2 Different version, 1 for encrypted, 1 for not encrypted - method overloading
-
         private readonly TranslationSet _set;
         public MorseTranslate(ref TranslationSet set) => _set = set;
 
-        public string[] TranslateIntoMorse(string[] input)
+        public string[] TranslateIntoMorse(string[] input) // Translate a string array into morse code
         {
             string[] output = new string[input.Length];
             for(int i = 0; i < input.Length; i++)
@@ -85,7 +82,7 @@ namespace Translations
         public string TranslateIntoMorse(string input) // Method overloading to either give a string or string array
         {
             string output = "";
-            input.Replace(".", "·");
+            input.Replace(".", "·"); // Makes sure any . are replaced with · as the translation doesn't support .
             for(int i = 0; i < input.Length; i++)
             {
                 if (_set.Translations.TryGetValue(input[i], out string? morse)) output += morse + "  ";
@@ -94,7 +91,7 @@ namespace Translations
             return output;
         }
 
-        public string TranslateFromMorse(string[] input)
+        public string TranslateFromMorse(string[] input) // Translate a string array from morse code
         {
             string output = "";
             for(int i = 0; i < input.Length; i++)

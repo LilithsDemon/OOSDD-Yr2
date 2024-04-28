@@ -8,9 +8,9 @@ namespace Encryption
     {
         private string passkey;
 
-        public string EncryptMessage(string input) => AES.EncryptString(passkey, input);
+        public string EncryptMessage(string input) => AES.EncryptString(passkey, input); // Encrypts the input string and returns it
 
-        public string DecryptMessage(string input) => AES.DecryptString(passkey, input);
+        public string DecryptMessage(string input) => AES.DecryptString(passkey, input); // Decrypts the input string and returns it
 
         public Encryptions(string given_passkey)
         {

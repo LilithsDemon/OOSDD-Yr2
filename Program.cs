@@ -3,7 +3,6 @@ using System.IO;
 using System.Text;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
-using Compression;
 using Translations;
 using Encryption;
 using DB;
@@ -11,8 +10,8 @@ using JollyWrapper;
 
 class Menu
 {
-    private bool finished = false;
-    private DatabaseConnection database = new();
+    private bool finished = false; // IF the user wants to exit the program
+    private DatabaseConnection database = new(); // Database connection for logging conversions
     public void StartMenu()
     {
         Console.Clear();
@@ -52,18 +51,19 @@ class Menu
 
     }
 
+    // Reads all files in the Translations folder and allows the user to choose a language
     protected string ChooseLanguage()
     {
         while(true)
         {
             Console.WriteLine("Choose language:");
-            string file_location = "./Translations/";
-            string[] files = Directory.GetFiles(file_location);
+            string file_location = "./Translations/"; // Location of the translation files
+            string[] files = Directory.GetFiles(file_location); // Get all files in the directory
             for (int i = 0; i < files.Length; i++)
             {
-                Console.WriteLine($"{i + 1}: {files[i]}");
+                Console.WriteLine($"{i + 1}: {files[i]}"); // Display the files to the user
             }
-            bool correct_value = int.TryParse(Console.ReadLine() ?? "0", out int choice);
+            bool correct_value = int.TryParse(Console.ReadLine() ?? "0", out int choice); // Get the user's choice
             if(!correct_value) 
             {   
                 Console.WriteLine("Please enter a numerical value");
@@ -84,7 +84,7 @@ class Menu
     public void TranslateIntoMorse()
     {
         Console.Clear();
-        string file = ChooseLanguage();
+        string file = ChooseLanguage(); // Get's the chosen language file
 
         TranslationSet set = new(file);
         set.CreateTranslations();
@@ -92,12 +92,12 @@ class Menu
 
         Console.WriteLine("Enter text to be translated: ");
         string input = Console.ReadLine() ?? "";
-        database.InsertConversion(input);
-        input = input.ToUpper();
-        if (set.CheckForInvalidCharacters(input))
+        database.InsertConversion(input); // Log the conversion into the database
+        input = input.ToUpper(); // Only capital letters in the translation files
+        if (set.CheckForInvalidCharacters(input)) // Checks for any characters that are not in the translation files
         {
             Console.WriteLine("Invalid characters found in input they will be removed");
-            set.FixInvalidCharacters(input);
+            set.FixInvalidCharacters(input); // Removes any invalid characters
         }
         string translation = morse.TranslateIntoMorse(input);
         Console.WriteLine("Would you like to encrypt the message? (y/n): ");
@@ -105,10 +105,9 @@ class Menu
         {
             Console.WriteLine("Enter passkey: ");
             string passkey = Console.ReadLine() ?? "";
-            Encryptions encryption = new(passkey);
-            translation = translation.Replace("·", ".");
-            Console.WriteLine(translation);
-            translation = encryption.EncryptMessage(translation);
+            Encryptions encryption = new(passkey); // Creates new encryption object with the passkey
+            translation = translation.Replace("·", "."); // Replaces the · with . for the encryption as it doesn't support ·
+            translation = encryption.EncryptMessage(translation); // Encrypts the message
         }
         Console.WriteLine($"Output: {translation}");
     }
@@ -133,7 +132,9 @@ class Menu
             Encryptions encryption = new(passkey);
             input = encryption.DecryptMessage(input);
         }
-        input = input.Replace(".", "·");
+        input = input.Replace(".", "·"); // Replaces . with · for the translation as it doesn't support .
+
+        // This splits the inputs into words and then each individual morse character
         string[] split_words = input.Split('/');
         List<string> split_morse = new List<string>();
         foreach(string word in split_words)
@@ -150,6 +151,7 @@ class Menu
         Console.WriteLine($"Morse: {translation}");
     }
 
+    // Allows a user to make sure they know each character in morse code
     public void Training()
     {
         Console.Clear();
@@ -169,7 +171,7 @@ class Menu
             else 
             {
                 
-                Translations.TranslationSet.RandomValues random_letter = set.GetRandomMorseCharacter();
+                Translations.TranslationSet.RandomValues random_letter = set.GetRandomMorseCharacter(); // A record that contains a random letter and it's morse code
                 
                 Console.WriteLine($"Covert {random_letter.Value} to it's letter: ");
                 input = (Console.ReadLine() ?? "").ToUpper();
